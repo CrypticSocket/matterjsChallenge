@@ -13,7 +13,8 @@ export default class Balls {
             restitution : 1,
             friction : 0,
             frictionStatic : 0,
-            frictionAir : 0
+            frictionAir : 0,
+            inertia : Infinity
         }
 
         for(let i = 0; i < 5; i++)
@@ -21,10 +22,10 @@ export default class Balls {
             // this.ball = game.Bodies.circle(200, 200, 200)
             if(i==0)
             {
-                this.ball = game.Bodies.circle(this.position.x/2 - 300 + i * 50 , this.position.y/2 - 150, this.radius)
+                this.ball = game.Bodies.circle(this.position.x/2 - 300 + i * 50 , this.position.y/2 - 150, this.radius, this.options)
             }
             else{
-                this.ball = game.Bodies.circle(this.position.x/2 - 100 + i * 50 , this.position.y/2, this.radius)
+                this.ball = game.Bodies.circle(this.position.x/2 - 100 + i * 50 , this.position.y/2, this.radius, this.options)
             }
             this.constraints = {
                 bodyA: construct.brick.brick,
