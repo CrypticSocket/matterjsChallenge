@@ -10,7 +10,7 @@ export default class Balls {
         this.objects = []
 
         this.options = {
-            restitution : 1,
+            restitution : 1.05,
             friction : 0,
             frictionStatic : 0,
             frictionAir : 0,
