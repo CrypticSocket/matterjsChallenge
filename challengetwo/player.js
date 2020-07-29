@@ -34,6 +34,7 @@ export default class Player {
 
     goLeft()
     {
+        this.velocity = this.player.velocity
         this.velocity.x = -10
         this.game.Body.setVelocity(this.player, this.velocity)
         // this.game.Body.applyForce(this.player, {x : 0, y : 0}, this.velocity)
@@ -41,6 +42,7 @@ export default class Player {
 
     goRight()
     {
+        this.velocity = this.player.velocity
         this.velocity.x = 10
         this.game.Body.setVelocity(this.player, this.velocity)
         // this.game.Body.applyForce(this.player, {x : 0, y : 0}, this.velocity)
@@ -48,7 +50,8 @@ export default class Player {
 
     jump()
     {
-        this.velocity.y = -10
+        this.velocity = this.player.velocity
+        this.velocity.y = -20
         this.game.Body.setVelocity(this.player, this.velocity)
     }
 
@@ -61,6 +64,7 @@ export default class Player {
 
     stopJump()
     {
+        this.velocity = this.player.velocity
         this.velocity.y = 0
         this.game.Body.setVelocity(this.player, this.velocity)
     }

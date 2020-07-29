@@ -9,6 +9,7 @@ export default class Game {
         this.World = Matter.World
         this.Constraint = Matter.Constraint
         this.Body = Matter.Body
+        this.Composite = Matter.Composite
 
         this.engine = this.Engine.create()
 

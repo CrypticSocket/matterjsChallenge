@@ -9,8 +9,8 @@ export default class InputHandler{
                 break;
                 case 39 : gBodies.player.goRight()
                 break;
-
                 case 38: gBodies.player.jump()
+                break;
             }
         })
 
